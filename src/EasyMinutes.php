@@ -38,12 +38,4 @@ class EasyMinutes
     {
         return $int * self::A_YEAR;
     }
-
-    public static function february(bool $leapYear = false)
-    {
-        if ($leapYear) {
-            return self::A_DAY * 29;
-        }
-        return self::A_DAY * 28;
-    }
 }

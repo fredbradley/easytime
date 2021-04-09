@@ -55,4 +55,14 @@ class DaysTest extends TestCase
 
         EasyDays::month('3ewd');
     }
+
+    /** @test */
+    public function getSomethingElseWrong()
+    {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Property not found: [testDays]");
+
+        $days = new EasyDays();
+        $days->testDays;
+    }
 }
