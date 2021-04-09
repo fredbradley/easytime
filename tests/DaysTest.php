@@ -49,7 +49,8 @@ class DaysTest extends TestCase
         $this->assertEquals(31, EasyDays::month('december'));
     }
     /** @test */
-    public function days() {
+    public function days()
+    {
         $this->assertEquals(44640, EasyMinutes::days(EasyDays::month('january')));
     }
 
