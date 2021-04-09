@@ -17,20 +17,7 @@ composer require fredbradley/easytime
 ```
 
 ## Usage Examples
-
-``` php
-use FredBradley\EasyTime\EasySeconds;
-
-$seconds = EasySeconds::AN_HOUR; // returns 3600
-$seconds = EasySeconds::hours(2); // return 7200
-
-// What to know how many minutes in a year?
-$minutes = EasyMinutes::A_YEAR;
-
-// And if you want to you can mix them together...
-$seconds = EasySeconds::minutes(EasyMinutes::AN_HOUR); // return 3600
-
-```
+Please see [the docs](https://git.fred.im/easytime) for usage example. 
 
 Pull requests open for people who find this useful and what to build more.
 

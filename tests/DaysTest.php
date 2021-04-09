@@ -3,6 +3,8 @@
 namespace FredBradley\EasyTime\Tests;
 
 use FredBradley\EasyTime\EasyDays;
+use FredBradley\EasyTime\EasyMinutes;
+use FredBradley\EasyTime\EasySeconds;
 use PHPUnit\Framework\TestCase;
 
 class DaysTest extends TestCase
@@ -45,6 +47,10 @@ class DaysTest extends TestCase
         $this->assertEquals(31, $days->december);
 
         $this->assertEquals(31, EasyDays::month('december'));
+    }
+    /** @test */
+    public function days() {
+        $this->assertEquals(44640, EasyMinutes::days(EasyDays::month('january')));
     }
 
     /** @test */
