@@ -1,6 +1,5 @@
 <?php
 
-
 namespace FredBradley\EasyTime;
 
 class EasyDays
@@ -26,7 +25,7 @@ class EasyDays
     {
         $instance = new EasyDays();
         if (! in_array($month, array_keys($instance->monthLengths))) {
-            throw new \Exception("Month not recognised: [".$month."]", 400);
+            throw new \Exception("Month not recognised: [" . $month . "]", 400);
         }
         if ($month==='february') {
             return $instance->february($leapYear);
@@ -48,6 +47,6 @@ class EasyDays
             return $this->monthLengths[ $name ];
         }
 
-        throw new \Exception("Property not found: [".$name."]", 400);
+        throw new \Exception("Property not found: [" . $name . "]", 400);
     }
 }
