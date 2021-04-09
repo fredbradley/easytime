@@ -1,0 +1,5 @@
+preset: psr12
+tab-width: 4
+use-tabs: false
+finder:
+  name: "*.php"

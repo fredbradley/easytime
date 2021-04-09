@@ -2,11 +2,12 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fredbradley/easytime.svg?style=flat-square)](https://packagist.org/packages/fredbradley/easytime)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-![StyleCI Status](https://github.styleci.io/repos/278584366/shield)
+![StyleCI Status](https://github.styleci.io/repos/356180937/shield)
 [![Total Downloads](https://img.shields.io/packagist/dt/fredbradley/easytime.svg?style=flat-square)](https://packagist.org/packages/fredbradley/easytime)
 
 A small class based package to help with human-readable calculations of time.
 
+For when you need to convert a human-readable number of minutes or seconds into an integer of seconds (for example expiry time on a Cache object)
 ## Installation
 
 You can install the package via composer:
@@ -15,24 +16,23 @@ You can install the package via composer:
 composer require fredbradley/easytime
 ```
 
-## Usage
+## Usage Examples
 
 ``` php
-use FredBradley\easytime;
+use FredBradley\EasyTime\EasySeconds;
 
-Easytime::remember('cache_key_name', 300, function() {
-    // Your logic
-    $value = "value";
-    return $value;
-});
+$seconds = EasySeconds::AN_HOUR; // returns 3600
+$seconds = EasySeconds::hours(2); // return 7200
 
-/*
- * Will set the value of 'cache_key_name' to the return value of the Closure callback and 
- * save in the cache for 5 minutes (300 seconds)
- */
+// What to know how many minutes in a year?
+$minutes = EasyMinutes::A_YEAR;
+
+// And if you want to you can mix them together...
+$seconds = EasySeconds::minutes(EasyMinutes::AN_HOUR); // return 3600
+
 ```
 
-There's only a small handful of methods in the one class. It's really basic, but amazingly wonderful!
+Pull requests open for people who find this useful and what to build more.
 
 ### Testing
 

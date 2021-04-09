@@ -2,8 +2,8 @@
 
 namespace FredBradley\Cacher\Tests;
 
-use FredBradley\Cacher\Cacher;
-use FredBradley\Cacher\Exceptions\FrameworkNotDetected;
+use FredBradley\EasyTime\EasyMinutes;
+use FredBradley\EasyTime\EasySeconds;
 use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase
@@ -15,36 +15,33 @@ class ExampleTest extends TestCase
     }
 
     /** @test */
-    public function legacy_remember_returns_same_value()
+    public function an_hour_is_3600_seconds()
     {
-        $value = Cacher::setAndGet("phpunittest", 5, function () {
-            return 'My Value';
-        });
-
-        $this->assertSame("My Value", $value);
+        $this->assertEquals(3600, EasySeconds::AN_HOUR);
     }
 
     /** @test */
-    public function remember_returns_same_value()
+    public function two_hours_is_7200_seconds()
     {
-        $value = Cacher::remember("phpunittest", 5, function () {
-            return 'My Value';
-        });
-
-        $this->assertSame("My Value", $value);
+        $this->assertEquals(7200, EasySeconds::hours(2));
     }
 
     /** @test */
-    public function forget_returns_exception()
+    public function three_hours_is_seconds()
     {
-        $this->expectException(FrameworkNotDetected::class);
-        $value = Cacher::forget('phpunittest');
+        $this->assertEquals(10800, EasySeconds::minutes(EasyMinutes::hours(3)));
     }
 
     /** @test */
-    public function get_returns_exception()
+    public function seconds_in_a_year()
     {
-        $this->expectException(FrameworkNotDetected::class);
-        $value = Cacher::get('phpunittest');
+        $this->assertEquals(31536000, EasySeconds::A_YEAR);
     }
+
+    /** @test */
+    public function mixed_test_from_readme()
+    {
+        $this->assertEquals(3600, EasySeconds::minutes(EasyMinutes::AN_HOUR));
+    }
+
 }

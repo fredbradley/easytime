@@ -2,8 +2,3 @@ parameters:
     level: 8
     paths:
         - src
-    ignoreErrors:
-        - '#Function get_transient not found.#'
-        - '#Function set_transient not found.#'
-        - '#Function delete_transient not found.#'
-        - '#Function wp_die not found.#'
