@@ -43,5 +43,4 @@ class ExampleTest extends TestCase
     {
         $this->assertEquals(3600, EasySeconds::minutes(EasyMinutes::AN_HOUR));
     }
-
 }
