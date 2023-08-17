@@ -39,7 +39,8 @@ $minutes = EasyMinutes::days(EasyDays::month('february', true)); // where the se
 
 Pull requests open for people who find this useful and want to build more.
 
-###
+## Testing 
+(100% Code Coverage)
 ``` bash
 composer test
 ```
