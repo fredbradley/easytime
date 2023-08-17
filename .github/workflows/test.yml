@@ -19,7 +19,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}    
 
-    name: PHP ${{ matrix.php}} Test
+    name: PHP ${{ matrix.php}} on ${{ matrix.os}} Test
 
     steps:
       - name: Checkout Code
