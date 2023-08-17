@@ -4,6 +4,7 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 ![StyleCI Status](https://github.styleci.io/repos/356180937/shield)
 [![Total Downloads](https://img.shields.io/packagist/dt/fredbradley/easytime.svg?style=flat-square)](https://packagist.org/packages/fredbradley/easytime)
+![Tests Passing](https://github.com/fredbradley/easytime/workflows/Tests/badge.svg)
 
 A small class based package to help with human-readable calculations of time.
 
