@@ -37,7 +37,7 @@ $minutes = EasyMinutes::days(EasyDays::month('january'));
 $minutes = EasyMinutes::days(EasyDays::month('february', true)); // where the second variable is a boolean for a leap year
 ```
 
-Pull requests open for people who find this useful and what to build more.
+Pull requests open for people who find this useful and want to build more.
 
 ###
 ``` bash
