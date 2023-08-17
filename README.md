@@ -18,17 +18,34 @@ composer require fredbradley/easytime
 ```
 
 ## Usage Examples
-Please see [the docs](https://git.fred.im/easytime) for usage example. 
+
+``` php
+use FredBradley\EasyTime\EasySeconds;
+
+$seconds = EasySeconds::AN_HOUR; // returns 3600
+$seconds = EasySeconds::hours(2); // return 7200
+
+// What to know how many minutes in a year?
+$minutes = EasyMinutes::A_YEAR;
+
+// And if you want to you can mix them together...
+$seconds = EasySeconds::minutes(EasyMinutes::AN_HOUR); // return 3600
+
+// Number of Seconds in a given month?
+$minutes = EasyMinutes::days(EasyDays::month('january'));
+
+// Leap Years? Yep.. 
+$minutes = EasyMinutes::days(EasyDays::month('february', true)); // where the second variable is a boolean for a leap year
+```
 
 Pull requests open for people who find this useful and what to build more.
 
-### Testing
-
+###
 ``` bash
 composer test
 ```
 
-### Security
+## Security
 
 If you discover any security related issues, please email code@fredbradley.co.uk instead of using the issue tracker.
 
