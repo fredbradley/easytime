@@ -3,7 +3,7 @@
 namespace FredBradley\EasyTime;
 
 /**
- * Class EasyMinutes
+ * Class EasyMinutes.
  */
 class EasyMinutes
 {
