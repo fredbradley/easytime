@@ -4,7 +4,6 @@ namespace FredBradley\EasyTime\Tests;
 
 use FredBradley\EasyTime\EasyDays;
 use FredBradley\EasyTime\EasyMinutes;
-use FredBradley\EasyTime\EasySeconds;
 use PHPUnit\Framework\TestCase;
 
 class DaysTest extends TestCase
@@ -48,6 +47,7 @@ class DaysTest extends TestCase
 
         $this->assertEquals(31, EasyDays::month('december'));
     }
+
     /** @test */
     public function days()
     {
@@ -58,7 +58,7 @@ class DaysTest extends TestCase
     public function getSomethingWrong()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Month not recognised: [3ewd]");
+        $this->expectExceptionMessage('Month not recognised: [3ewd]');
 
         EasyDays::month('3ewd');
     }
@@ -67,7 +67,7 @@ class DaysTest extends TestCase
     public function getSomethingElseWrong()
     {
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Property not found: [testDays]");
+        $this->expectExceptionMessage('Property not found: [testDays]');
 
         $days = new EasyDays();
         $days->testDays;
