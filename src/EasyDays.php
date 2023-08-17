@@ -12,18 +12,18 @@ class EasyDays
      * @var array<string,int>
      */
     public array $monthLengths = [
-        'january' => 31,
-        'february' => 28,
-        'march' => 31,
-        'april' => 30,
-        'may' => 31,
-        'june' => 30,
-        'july' => 31,
-        'august' => 31,
+        'january'   => 31,
+        'february'  => 28,
+        'march'     => 31,
+        'april'     => 30,
+        'may'       => 31,
+        'june'      => 30,
+        'july'      => 31,
+        'august'    => 31,
         'september' => 30,
-        'october' => 31,
-        'november' => 30,
-        'december' => 31,
+        'october'   => 31,
+        'november'  => 30,
+        'december'  => 31,
     ];
 
     /**
@@ -34,7 +34,7 @@ class EasyDays
         $month = strtolower($month); // lets make sure we always do lower case
 
         $instance = new self();
-        if (! in_array($month, array_keys($instance->monthLengths))) {
+        if (!in_array($month, array_keys($instance->monthLengths))) {
             throw new Exception('Month not recognised: ['.$month.']', 400);
         }
         if ($month === 'february') {
